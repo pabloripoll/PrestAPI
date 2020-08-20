@@ -1,0 +1,22 @@
+RewriteEngine On
+
+## --- DOMAIN HTML VIEW ROOT --- ###
+RewriteCond %{REQUEST_URI} !^/views/prestapi
+RewriteRule ^(.*)$ /views/prestapi/$1 [L]
+
+## --- FRIENDLY URLS --- ###
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+### --- APP VIEW
+# Any html file with its query string will executed as index application file
+RewriteRule ^(.*)\.html$ /views/prestapi/index.html?%{QUERY_STRING} [L,QSA]
+
+### --- API RESTfull
+RewriteRule ^/api/restfull$ $1/api-php/restfull.php?%{QUERY_STRING} [L,QSA]
+
+#ErrorDocument 400 /
+#ErrorDocument 401 /
+#ErrorDocument 403 /
+ErrorDocument 404 /views/prestapi/index.html
+#ErrorDocument 500 /

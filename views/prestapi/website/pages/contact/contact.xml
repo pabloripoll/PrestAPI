@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<aside class="col-3 col-sm-12 text-center">
+  <p class="width-100 mt-10">Bussiness Hours:</p>
+  <h2 class="width-100 mt-10">Monday to Friday<br>from 9am to 6pm</h2>
+  <p class="width-100 mt-20">Phone Number:</p>
+  <h2 class="width-100 mt-10">+34 99 843 203</h2>
+  <p class="width-100 mt-20">Email:</p>
+  <h2 class="width-100 mt-10">info@example.com</h2>
+</aside>
+
+<div class="col-9 col-sm-12"><!-- Main Content -->
+  <div class="row pa-10">
+    <h1 class="page-title width-100">GET IN CONTACT</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3004.580067818652!2d1.0996827!3d41.1436923!3m2!1i1024!2i768!4f13.1!2m1!1smaps!5e0!3m2!1sen!2ses!4v1596788398292!5m2!1sen!2ses" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+</div><!-- / Main Content -->

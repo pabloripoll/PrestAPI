@@ -1,0 +1,524 @@
+/* Website Pallete */
+/* Utils Colors */
+/* Screens max width... 480px, 640px, 768px, 992px, 1200px */
+/* Buttons */
+body {
+  color: #566573;
+  font-size: 12pt;
+}
+
+/* Top Header */
+nav.top-header {
+  background-color: #2980B9;
+  color: #FBFCFC;
+  height: 40px;
+}
+
+nav.top-header ul {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  float: right;
+}
+
+nav.top-header li {
+  display: inline-block;
+  height: auto;
+}
+
+nav.top-header li :hover {
+  background-color: #2874A6;
+}
+
+nav.top-header a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 0 12px;
+  line-height: 40px;
+  font-size: 11pt;
+}
+
+#btnLogin {
+  cursor: pointer;
+}
+
+/* Header */
+nav.header {
+  background-color: #3498DB;
+  color: #F4F6F7;
+}
+
+nav.header a.logo {
+  width: auto;
+  height: 70px;
+  float: left;
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
+nav.header a.logo div h1, nav.header a.logo div span {
+  float: left;
+  clear: both;
+  color: #F4F6F7;
+}
+
+.navbar {
+  width: auto;
+  padding-right: 10px;
+  float: right;
+  /* Clear floats */
+  /* Bring the nav above everything else--uncomment if needed.
+  position: relative;
+  z-index: 5;
+  */
+}
+
+/*--- DROPDOWN ---*/
+.navbar ul {
+  background-color: transparent;
+  /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+  background: rgba(255, 255, 255, 0);
+  /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+  position: absolute;
+  right: 9999px;
+  /* Hide off-screen when not needed (this is more accessible than display: none;) */
+}
+
+.navbar li a {
+  /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+  padding: 0 15px;
+  height: 90px;
+  line-height: 90px;
+}
+
+.navbar li:hover a {
+  /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+  background-color: #2980B9 !important;
+}
+
+.navbar li:hover ul li a {
+  /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+  text-decoration: none;
+  color: inherit;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.navbar li:hover ul li a :hover {
+  /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+  background-color: #333;
+}
+
+/* Page Menu */
+.page-menu {
+  width: 100%;
+  height: auto;
+  border: 1px solid #F4F6F7;
+  float: left;
+}
+
+.page-menu ul ul {
+  background-color: #F4F6F7;
+}
+
+.page-menu ul ul ul {
+  background-color: #ECF0F1;
+}
+
+.page-menu li {
+  /* difine <li> height is forbidden */
+  border-bottom: 1px solid #F4F6F7;
+}
+
+.page-menu li:last-child {
+  border-bottom: none;
+}
+
+.page-menu li a {
+  /* difines js script calculations */
+  padding: 10px;
+  font-size: inherit;
+}
+
+.page-menu li a:hover {
+  background-color: #3498DB;
+  color: #F4F6F7;
+}
+
+.page-menu li a.has-menu {
+  width: 100%;
+  float: left;
+}
+
+.page-menu li a.has-menu::after {
+  content: "";
+  border: solid #566573;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  margin-top: 3px;
+  display: inline-block;
+  text-align: right;
+  /* ignored float with display bug*/
+  float: right;
+  opacity: 0.5;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Page Content Aside */
+aside {
+  min-height: 100%;
+  padding: 15px;
+  background-color: #2980B9;
+  color: #F4F6F7;
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  aside {
+    min-height: auto;
+  }
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: #3498DB;
+  color: #F4F6F7;
+  flex-shrink: 0;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+footer p {
+  width: auto;
+  height: auto;
+}
+
+/* Page Contents */
+.page-title {
+  padding: 10px 0;
+  border-bottom: 2px solid #808B96;
+}
+
+/* Widgets */
+dl {
+  border-right: 1px solid #ECF0F1;
+  border-left: 1px solid #ECF0F1;
+}
+
+dl:last-child {
+  border-bottom: 1px solid #ECF0F1;
+}
+
+dt {
+  padding: 15px 10px;
+  border-top: 1px solid #ECF0F1;
+  border-bottom: 1px solid #ECF0F1;
+}
+
+dd {
+  background-color: #FBFCFC;
+}
+
+/* Buttons */
+.social-btn {
+  background-color: transparent;
+  border: 1px solid #FBFCFC;
+  color: inherit;
+}
+
+.social-btn:hover {
+  background-color: #FBFCFC;
+  color: #2980B9;
+}
+
+#copyright {
+  padding: 20px 10px;
+  background-color: #2980B9;
+}
+
+.btn, .btn-info, .btn-success, .btn-danger, .btn-warning, .btn-light {
+  font-size: 12pt;
+}
+
+.btn, .btn-info, .btn-success, .btn-danger, .btn-warning {
+  color: #F4F6F7;
+}
+
+.btn-light {
+  color: #566573;
+}
+
+.btn, .btn-dark {
+  border-color: #566573;
+  background-color: #566573;
+}
+
+.btn:hover, .btn-dark:hover {
+  border-color: #2C3E50;
+  background-color: #2C3E50;
+}
+
+.btn:focus, .btn-dark:focus {
+  border-color: #2C3E50;
+  background-color: #2C3E50;
+}
+
+.btn:active, .btn-dark:active {
+  border-color: #212F3D;
+  background-color: #212F3D;
+}
+
+.btn-info {
+  border-color: #3498DB;
+  background-color: #3498DB;
+}
+
+.btn-info:hover {
+  border-color: #2E86C1;
+  background-color: #2E86C1;
+}
+
+.btn-info:focus {
+  border-color: #2E86C1;
+  background-color: #2E86C1;
+}
+
+.btn-info:active {
+  border-color: #2874A6;
+  background-color: #2874A6;
+}
+
+.btn-success {
+  border-color: #27AE60;
+  background-color: #27AE60;
+}
+
+.btn-success:hover {
+  border-color: #229954;
+  background-color: #229954;
+}
+
+.btn-success:focus {
+  border-color: #229954;
+  background-color: #229954;
+}
+
+.btn-success:active {
+  border-color: #1E8449;
+  background-color: #1E8449;
+}
+
+.btn-danger {
+  border-color: #C0392B;
+  background-color: #C0392B;
+}
+
+.btn-danger:hover {
+  border-color: #A93226;
+  background-color: #A93226;
+}
+
+.btn-danger:focus {
+  border-color: #A93226;
+  background-color: #A93226;
+}
+
+.btn-danger:active {
+  border-color: #922B21;
+  background-color: #922B21;
+}
+
+.btn-warning {
+  border-color: #F39C12;
+  background-color: #F39C12;
+}
+
+.btn-warning:hover {
+  border-color: #D68910;
+  background-color: #D68910;
+}
+
+.btn-warning:focus {
+  border-color: #D68910;
+  background-color: #D68910;
+}
+
+.btn-warning:active {
+  border-color: #B9770E;
+  background-color: #B9770E;
+}
+
+.btn-light {
+  border-color: #EAECEE;
+  background-color: #EAECEE;
+}
+
+.btn-light:hover {
+  border-color: #D5D8DC;
+  background-color: #D5D8DC;
+}
+
+.btn-light:focus {
+  border-color: #D5D8DC;
+  background-color: #D5D8DC;
+}
+
+.btn-light:active {
+  border-color: #ABB2B9;
+  background-color: #ABB2B9;
+}
+
+/* Text Colors */
+.text-dark {
+  color: #566573;
+}
+
+.text-info {
+  color: #3498DB;
+}
+
+.text-success {
+  color: #27AE60;
+}
+
+.text-danger {
+  color: #C0392B;
+}
+
+.text-warning {
+  color: #F39C12;
+}
+
+.text-light {
+  color: #EAECEE;
+}
+
+/* Background Colors */
+.back-dark {
+  background-color: #566573;
+}
+
+.back-info {
+  background-color: #3498DB;
+}
+
+.back-success {
+  background-color: #27AE60;
+}
+
+.back-danger {
+  background-color: #C0392B;
+}
+
+.back-warning {
+  background-color: #F39C12;
+}
+
+.back-light {
+  background-color: #EAECEE;
+}
+
+/* Body Cover */
+.body-cover-dark {
+  background-color: rgba(41, 128, 185, 0.95);
+}
+
+.body-cover-dark .loader {
+  border: 16px solid #F4F6F7;
+  border-top: 16px solid #3498DB;
+}
+
+.body-cover-light {
+  background-color: rgba(251, 252, 252, 0.95);
+}
+
+.body-cover-light .loader {
+  border: 16px solid #3498DB;
+  border-top: 16px solid #F4F6F7;
+}
+
+.body-cover-dark.block, .body-cover-light.block {
+  display: block;
+}
+
+.body-cover-dark.none, .body-cover-light.none {
+  display: none;
+}
+
+/* Modals */
+/* Modal Dark Theme */
+.modal-theme-dark.modal-dlg {
+  background-color: #2980B9;
+  background-color: rgba(41, 128, 185, 0.5);
+}
+
+.modal-theme-dark.modal-dlg .modal-dlg-header {
+  background-color: #3498DB;
+}
+
+.modal-theme-dark.modal-dlg .modal-dlg-header-close-btn {
+  color: #F4F6F7;
+}
+
+.modal-theme-dark.modal-dlg .modal-dlg-header-close-btn:hover, .modal-theme-dark.modal-dlg .modal-dlg-header-close-btn:focus {
+  background: #F00;
+}
+
+.modal-theme-dark.modal-dlg .modal-dlg-window {
+  border: 1px solid rgba(41, 128, 185, 0.5);
+  background-color: #5DADE2;
+  color: #F4F6F7;
+}
+
+/* Modal Light Theme */
+.modal-theme-light.modal-dlg {
+  background-color: #ECF0F1;
+  background-color: rgba(236, 240, 241, 0.5);
+}
+
+.modal-theme-light.modal-dlg .modal-dlg-header {
+  background-color: #F4F6F7;
+}
+
+.modal-theme-light.modal-dlg .modal-dlg-header-close-btn {
+  color: #808B96;
+}
+
+.modal-theme-light.modal-dlg .modal-dlg-header-close-btn:hover, .modal-theme-light.modal-dlg .modal-dlg-header-close-btn:focus {
+  color: #F4F6F7;
+  background: #F00;
+}
+
+.modal-theme-light.modal-dlg .modal-dlg-window {
+  border: 1px solid #808B96;
+  background-color: #FBFCFC;
+  color: #566573;
+}

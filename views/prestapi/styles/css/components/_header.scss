@@ -1,0 +1,66 @@
+nav.header {
+  background-color: map-get($bgcDark, '1');
+  color: map-get($textLight, '0');
+  a.logo {
+    width: auto;
+    height: 70px;
+    float: left;
+    margin: 10px 0;
+    padding-left: 10px;
+    div {
+      h1, span {
+        float: left;
+        clear: both;
+        color: map-get($textLight, '0');
+      }
+    }
+  }
+}
+
+.navbar {
+  width: auto;
+  padding-right: 10px;
+  float: right;
+  /* Clear floats */
+  /* Bring the nav above everything else--uncomment if needed.
+  position: relative;
+  z-index: 5;
+  */
+}
+
+/*--- DROPDOWN ---*/
+.navbar ul {
+  background-color: transparent;
+  /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+  background: rgba(255, 255, 255, 0);
+  /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+  position: absolute;
+  right: 9999px;
+  /* Hide off-screen when not needed (this is more accessible than display: none;) */
+}
+
+.navbar li a {
+  /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+  padding: 0 15px;
+  height: 90px;
+  line-height: 90px;
+}
+
+.navbar li:hover a {
+  /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+  background-color: map-get($bgcDark, '1-hover') !important;
+}
+
+.navbar li:hover ul li a {
+  /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+  text-decoration: none;
+  color: inherit;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  :hover {
+    /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+    background-color: #333;
+  }
+}
+

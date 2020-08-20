@@ -1,0 +1,98 @@
+/* Website Pallete */
+$bgcDark:(
+  '0': #2980B9,
+  '0-hover': #2874A6,
+  '0-rgb': rgb(41, 128, 185),
+  '0-rgba50': rgba(41, 128, 185, 0.5),
+  '0-rgba95': rgba(41, 128, 185, 0.95),
+  '1': #3498DB,
+  '1-hover': #2980B9,
+  '1-rgb': rgb(52, 152, 219),
+  '1-rgba50': rgba(52, 152, 219, 0.5),
+  '2': #5DADE2,
+  '2-hover': #3498DB,
+  '2-rgb': rgb(93, 173, 226),
+  '2-rgba50': rgba(93, 173, 226, 0.5),
+);
+$bgcLight:(  
+  '0': #FBFCFC,
+  '0-hover': #FBFCFC,
+  '0-rgb': rgb(251, 252, 252),
+  '0-rgba50': rgba(251, 252, 252, 0.5),
+  '0-rgba95': rgba(251, 252, 252, 0.95),
+  '1': #F4F6F7,
+  '1-hover': #F4F6F7,
+  '1-rgb': rgb(244, 246, 247),
+  '1-rgba50': rgba(244, 246, 247, 0.5),
+  '2': #ECF0F1,
+  '2-hover': #ECF0F1,
+  '2-rgb':rgb(236, 240, 241),
+  '2-rgba50': rgba(236, 240, 241, 0.5),
+);
+$textDark:(
+  '0': #2980B9,
+  '0-hover': #2874A6,
+  '1': #3498DB,
+  '1-hover': #2980B9,
+  '2': #566573,
+  '2-hover': #566573,
+  '3': #808B96,
+  '3-hover': #566573,
+);
+$textLight:(
+  '0': #F4F6F7,
+  '0-hover': #F4F6F7,
+  '1': #FBFCFC,
+  '1-hover': #FBFCFC,
+  '2': #ECF0F1,
+  '2-hover': #ECF0F1,
+);
+/* Utils Colors */
+$Info: (
+  'back': #3498DB,
+  'border': #3498DB,
+  'back-hover': #2E86C1,
+  'border-hover': #2E86C1,
+  'back-active': #2874A6,
+  'border-active': #2874A6,
+);
+$Success: (
+  'back': #27AE60,
+  'border': #27AE60,
+  'back-hover': #229954,
+  'border-hover': #229954,
+  'back-active': #1E8449,
+  'border-active': #1E8449,
+);
+$Warning: (
+  'back': #F39C12,
+  'border': #F39C12,
+  'back-hover': #D68910,
+  'border-hover': #D68910,
+  'back-active': #B9770E,
+  'border-active': #B9770E,
+);
+$Danger: (
+  'back': #C0392B,
+  'border': #C0392B,
+  'back-hover': #A93226,
+  'border-hover': #A93226,
+  'back-active': #922B21,
+  'border-active': #922B21,
+);
+$Dark: (
+  'back': #566573,
+  'border': #566573,
+  'back-hover': #2C3E50,
+  'border-hover': #2C3E50,
+  'back-active': #212F3D,
+  'border-active': #212F3D,
+);
+$Light: (
+  'back': #EAECEE,
+  'border': #EAECEE,
+  'back-hover': #D5D8DC,
+  'border-hover': #D5D8DC,
+  'back-active': #ABB2B9,
+  'border-active': #ABB2B9,
+);

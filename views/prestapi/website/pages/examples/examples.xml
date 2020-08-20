@@ -1,0 +1,167 @@
+<div class="col-12 mb-5"><!-- Main Content -->
+  <div class="row pa-10">
+    <h1 class="width-100 page-title">Page title</h1>
+    
+  </div>
+</div><!-- / Main Content -->
+
+<div class="col-3 col-sm-12 pl-10 pr-10">
+  <h4 class="width-100 mb-10">4 Level Accordion 1:</h4>
+  <div class="page-menu mb-20">
+    <ul class="accordion-menu">
+      <li>
+        <a class="has-menu">Menu A</a>
+        <ul>
+          <li>
+            <a>Menu A.1</a>
+          </li>
+          <li>
+            <a class="has-menu">Menu A.2</a>
+            <ul>
+              <li>
+                <a>Menu A.2.1</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a>Menu A.3</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a>Menu B</a>
+      </li>
+    </ul>
+  </div>
+
+  <h4 class="width-100 mb-10">4 Level Accordion 2:</h4>
+  <div class="page-menu mb-30">
+    <ul class="accordion-menu">
+      <li>
+        <a class="has-menu">Menu C</a>
+        <ul>
+          <li>
+            <a>Menu C.1</a>
+          </li>
+          <li>
+            <a class="has-menu">Menu C.2</a>
+            <ul>
+              <li>
+                <a>Menu C.2.1</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="has-menu">Menu D</a>
+        <ul>
+          <li>
+            <a class="has-menu">Menu D.1</a>
+            <ul>
+              <li>
+                <a class="has-menu">Menu D.1.1</a>
+                <ul>
+                  <li>
+                    <a>Menu D.1.1.1</a>
+                  </li>
+                  <li>
+                    <a class="has-menu">Menu D.1.1.2</a>
+                    <ul>
+                      <li>
+                        <a>Menu D.1.1.2.1</a>
+                      </li>
+                      <li>
+                        <a>Menu D.1.1.2.2</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>Menu D.1.2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a>Menu D.2</a>            
+          </li>
+          <li>
+            <a>Menu D.3</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<div class="col-9 col-sm-12"><!-- Main Content -->
+  <div class="row pa-10">
+    <p class="width-100 mb-10">Buttons:</p>
+    <div class="col-6 pa-5">
+      <button class="btn btn-lg btn-light">Light Button</button>
+    </div>
+    <div class="col-6 pa-5">
+      <button class="btn btn-lg btn-dark">Dark Button</button>
+    </div>
+    <div class="col-6 pa-5">
+      <button class="btn btn-lg btn-info">Info Button</button>
+    </div>
+    <div class="col-6 pa-5">
+      <button class="btn btn-lg btn-success">Success Button</button>
+    </div>
+    <div class="col-6 pa-5">
+      <button class="btn btn-lg btn-warning">Warning Button</button>
+    </div>
+    <div class="col-6 pa-5">
+      <button class="btn btn-lg btn-danger">Danger Button</button>
+    </div>
+  </div>
+  <div class="row pa-10">
+    <p class="width-100 mb-10">Modal:</p>
+    <button class="btn btn-info modal-call-btn" data-target="modal-example-dark">Dark Modal</button>
+    <button class="btn btn-light modal-call-btn" data-target="modal-example-light">Light Modal</button>
+  </div>
+  <div class="row pa-10">
+    <p class="width-100 mb-10">Accordion Descriptions:</p>
+    <!-- Description list / Description term name / Description definitions -->
+    <dl>
+      <dt class="bold size-2">Section 1</dt>
+      <dd>
+        <p>Section 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </dd>
+      <dt class="bold size-2">Section 2</dt>
+      <dd>
+        <p>Section 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </dd>
+      <dt class="bold size-2">Section 3</dt>
+      <dd>
+        <p>Section 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </dd>
+    </dl>
+  </div>
+  <div class="row pa-10 mb-40">
+    <p class="width-100 mb-10">Text or Background Colors:</p>
+    <p class="width-100 mb-10 text-dark"><b>Dark:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="width-100 mb-10 text-info"><b>Info:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="width-100 mb-10 text-success"><b>Success:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="width-100 mb-10 text-warning"><b>Warning:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="width-100 mb-10 text-danger"><b>Danger:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="width-100 mb-10 text-light back-dark"><b>Light:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div><!-- / Main Content -->

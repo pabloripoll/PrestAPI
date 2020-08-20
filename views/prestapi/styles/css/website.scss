@@ -1,0 +1,353 @@
+@import "components/colors";
+@import "components/fonts";
+@import "components/mixins";
+
+body {
+  color: map-get($textDark, '2');
+  font-size: map-get($font-sizes, 1);
+}
+/* Top Header */
+@import "components/headerTop";
+
+/* Header */
+@import "components/header";
+
+/* Page Menu */
+.page-menu {
+  width: 100%;
+  height: auto;
+  border: 1px solid map-get($bgcLight, '1');  
+  background-color: map-get($bgcLight, '3');
+  float: left;
+  ul ul {
+    background-color: map-get($bgcLight, '1');
+  }
+  ul ul ul {
+    background-color: map-get($bgcLight, '2');
+  }
+  li { /* difine <li> height is forbidden */    
+    border-bottom: 1px solid map-get($bgcLight, '1');
+    &:last-child {
+      border-bottom: none;
+      //border-bottom: 1px solid #000;
+    }
+    a { /* difines js script calculations */
+      padding: 10px;
+      font-size: inherit;
+      &:hover {
+        background-color: map-get($bgcDark, '1');
+        color: map-get($textLight, '0');
+      }
+      &.has-menu {
+        width: 100%;
+        float: left;
+        &::after{
+          content: "";
+          border: solid map-get($textDark, '2');
+          border-width: 0 3px 3px 0;
+          padding: 3px;
+          margin-top: 3px;
+          display: inline-block;
+          text-align: right;
+          /* ignored float with display bug*/
+          float: right;
+          opacity: 0.5;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+      }      
+    }
+  }  
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Page Content Aside */
+aside {
+  min-height: 100%;
+  padding: 15px;
+  background-color: map-get($bgcDark, '0');
+  color: map-get($textLight, '0');
+  text-align: center;
+  @media only screen and (max-width: map-get($screens, sm)) {
+    min-height: auto;
+  }
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: map-get($bgcDark, '1');
+  color: map-get($textLight, '0');
+  flex-shrink: 0;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  p {
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Page Contents */
+.page-title {
+  padding: 10px 0;
+  border-bottom: 2px solid map-get($textDark, '3');
+}
+
+/* Widgets */
+dl {
+  border-right: 1px solid map-get($bgcLight, '2');
+  border-left: 1px solid map-get($bgcLight, '2');
+  &:last-child {
+    border-bottom: 1px solid map-get($bgcLight, '2');
+  }
+}
+dt {
+  padding: 15px 10px;
+  border-top: 1px solid map-get($bgcLight, '2');
+  border-bottom: 1px solid map-get($bgcLight, '2');
+}
+dd {
+  background-color: map-get($bgcLight, '0');
+}
+
+/* Buttons */
+.social-btn {
+  background-color: transparent;
+  border:1px solid map-get($textLight, '1');
+  color: inherit;
+  &:hover {
+    background-color: map-get($textLight, '1');
+    color: map-get($textDark, '0'); 
+  }  
+}
+#copyright {
+  padding: 20px 10px;
+  background-color: map-get($bgcDark, '0');
+}
+
+.btn, .btn-info, .btn-success, .btn-danger, .btn-warning, .btn-light {
+  font-size: map-get($font-sizes, 1);
+}
+.btn, .btn-info, .btn-success, .btn-danger, .btn-warning {
+  color: map-get($textLight, '0');
+}
+.btn-light {
+  color: map-get($textDark, '2');
+}
+.btn, .btn-dark {
+  border-color: map-get($Dark, 'border');
+  background-color: map-get($Dark, 'back');  
+  &:hover {
+    border-color: map-get($Dark, 'border-hover');
+    background-color: map-get($Dark, 'back-hover');
+  }
+  &:focus {
+    border-color: map-get($Dark, 'border-hover');
+    background-color: map-get($Dark, 'back-hover');
+  }
+  &:active {
+    border-color: map-get($Dark, 'border-active');
+    background-color: map-get($Dark, 'back-active');
+  }
+}
+.btn-info {
+  border-color: map-get($Info, 'border');
+  background-color: map-get($Info, 'back');
+  &:hover {
+    border-color: map-get($Info, 'border-hover');
+    background-color: map-get($Info, 'back-hover');
+  }
+  &:focus {
+    border-color: map-get($Info, 'border-hover');
+    background-color: map-get($Info, 'back-hover');
+  }
+  &:active {
+    border-color: map-get($Info, 'border-active');
+    background-color: map-get($Info, 'back-active');
+  }
+}
+.btn-success {
+  border-color: map-get($Success, 'border');
+  background-color: map-get($Success, 'back');
+  &:hover {
+    border-color: map-get($Success, 'border-hover');
+    background-color: map-get($Success, 'back-hover');
+  }
+  &:focus {
+    border-color: map-get($Success, 'border-hover');
+    background-color: map-get($Success, 'back-hover');
+  }
+  &:active {
+    border-color: map-get($Success, 'border-active');
+    background-color: map-get($Success, 'back-active');
+  }
+}
+.btn-danger {
+  border-color: map-get($Danger, 'border');
+  background-color: map-get($Danger, 'back');
+  &:hover {
+    border-color: map-get($Danger, 'border-hover');
+    background-color: map-get($Danger, 'back-hover');
+  }
+  &:focus {
+    border-color: map-get($Danger, 'border-hover');
+    background-color: map-get($Danger, 'back-hover');
+  }
+  &:active {
+    border-color: map-get($Danger, 'border-active');
+    background-color: map-get($Danger, 'back-active');
+  }
+}
+.btn-warning {
+  border-color: map-get($Warning, 'border');
+  background-color: map-get($Warning, 'back');
+  &:hover {
+    border-color: map-get($Warning, 'border-hover');
+    background-color: map-get($Warning, 'back-hover');
+  }
+  &:focus {
+    border-color: map-get($Warning, 'border-hover');
+    background-color: map-get($Warning, 'back-hover');
+  }
+  &:active {
+    border-color: map-get($Warning, 'border-active');
+    background-color: map-get($Warning, 'back-active');
+  }
+}
+.btn-light {
+  border-color: map-get($Light, 'border');
+  background-color: map-get($Light, 'back');
+  &:hover {
+    border-color: map-get($Light, 'border-hover');
+    background-color: map-get($Light, 'back-hover');
+  }
+  &:focus {
+    border-color: map-get($Light, 'border-hover');
+    background-color: map-get($Light, 'back-hover');
+  }
+  &:active {
+    border-color: map-get($Light, 'border-active');
+    background-color: map-get($Light, 'back-active');
+  }
+}
+/* Text Colors */
+.text-dark {
+  color: map-get($Dark, 'back');
+}
+.text-info {
+  color: map-get($Info, 'back');
+}
+.text-success {
+  color: map-get($Success, 'back');
+}
+.text-danger {
+  color: map-get($Danger, 'back');
+}
+.text-warning {
+  color: map-get($Warning, 'back');
+}
+.text-light {
+  color: map-get($Light, 'back');
+}
+/* Background Colors */
+.back-dark {
+  background-color: map-get($Dark, 'back');
+}
+.back-info {
+  background-color: map-get($Info, 'back');
+}
+.back-success {
+  background-color: map-get($Success, 'back');
+}
+.back-danger {
+  background-color: map-get($Danger, 'back');
+}
+.back-warning {
+  background-color: map-get($Warning, 'back');
+}
+.back-light {
+  background-color: map-get($Light, 'back');
+}
+/* Body Cover */
+.body-cover-dark {
+  background-color: map-get($bgcDark, '0-rgba95');
+  .loader {
+    border: 16px solid map-get($bgcLight, '1');
+    border-top: 16px solid map-get($bgcDark, '1');
+  }
+}
+.body-cover-light {
+  background-color: map-get($bgcLight, '0-rgba95');
+  .loader {
+    border: 16px solid map-get($bgcDark, '1');
+    border-top: 16px solid map-get($bgcLight, '1');
+  }
+}
+.body-cover-dark, .body-cover-light {
+  &.block {
+    display: block;    
+  }
+  &.none {
+    display: none;    
+  }
+}
+
+/* Modals */
+/* Modal Dark Theme */
+.modal-theme-dark.modal-dlg {
+  background-color: map-get($bgcDark, '0');
+  background-color: map-get($bgcDark, '0-rgba50');
+  .modal-dlg-header {
+    background-color: map-get($bgcDark, '1');
+  }
+  .modal-dlg-header-close-btn {
+    color: map-get($textLight, '0');
+    &:hover, &:focus {
+      background: #F00;
+    }
+  }
+  .modal-dlg-window {
+    border: 1px solid map-get($bgcDark, '0-rgba50');
+    background-color: map-get($bgcDark, '2');
+    color: map-get($textLight, '0');
+  }  
+}
+/* Modal Light Theme */
+.modal-theme-light.modal-dlg {
+  background-color: map-get($bgcLight, '2');
+  background-color: map-get($bgcLight, '2-rgba50');
+  .modal-dlg-header {
+    background-color: map-get($bgcLight, '1');
+  }
+  .modal-dlg-header-close-btn {
+    color: map-get($textDark, '3');
+    &:hover, &:focus {
+      color: map-get($textLight, '0');
+      background: #F00;
+    }
+  }
+  .modal-dlg-window {
+    border: 1px solid map-get($textDark, '3');
+    background-color: map-get($bgcLight, '0');
+    color: map-get($textDark, '2');
+  }
+}

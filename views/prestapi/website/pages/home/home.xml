@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<div class="col-4 col-sm-12 size-2 mt-40 pa-10">
+  This is a frontend application as a basic framework, 
+  written in <b>Javascript ES6</b> and pretended to emulate multiple pages by controlling them through one file.
+  <br><br>This applicacion runs only with HTML and JS, so if it needs, html extension can be changed by PHP, PY or ASP.
+  <br><br>This project includes <b>Sass</b> files with pre-builded elements styles.
+  <br><br><b>DCC JS</b> files stands for Dynamic Content Controller.
+</div>
+
+<div class="col-8 col-sm-12 mt-40"><!-- Main Content -->
+  <div class="row pa-10">
+    <h2 class="width-100 mb-10">Project:</h2>
+    <!-- Description list / Description term name / Description definitions -->
+    <dl>
+      <dt class="bold size-2">Motivation</dt>
+      <dd>
+        <p>I develop this application just to put into practice what I am learning from the use of native Javascript ES6 and Sass for CSS.
+          This motivation comes from the fact of deepening how framworks or libraries work and in parallel solve in a simple and light way similar functions.
+          <br>To be honest: I love to resolve easily and quickly to deploy into production any app, so I like pre-builded apps ;)</p>
+      </dd>
+      <dt class="bold size-2">What you can find</dt>
+      <dd>
+        <p>This Font End app is intended to be usefull for any Back End driver or software, such as PHP, Python, .NET or NodeJS.<br>
+        Just changing the files extensions can be deploy in Apache, NodeJS or Nginx servers.<br>
+        With and RESTfull API behind, it can be used to connect to local or remote databases.<br>
+        Remember to use Rewrite Rules to redirect all possible urls to main application file.</p>
+      </dd>
+      <dt class="bold size-2">Expectations</dt>
+      <dd>
+        <p>Although this application is for testing, I hope it will be useful for future development and 
+          production, keeping the code updated by collaborating with the developer community.</p>
+      </dd>
+    </dl>
+  </div>  
+
+</div><!-- / Main Content -->
+
+<!--<aside class="col-3 col-sm-12">
+  <h2>What?</h2>
+  <p>Chania is a city on the island of Crete.</p>
+  <h2>Where?</h2>
+  <p>Crete is a Greek island in the Mediterranean Sea.</p>
+  <h2>How?</h2>
+  <p>You can reach Chania airport from all over Europe.</p>
+</aside>-->

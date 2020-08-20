@@ -1,0 +1,400 @@
+@import "components/fonts";
+@import "components/mixins";
+
+/* Normalize */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  font-family: $font-stack;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited {
+    color: inherit;
+  }
+}
+
+ul, ul ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  list-style: outside none none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+button,
+input { /* 1 */
+  overflow: visible;
+}
+button,
+select { /* 1 */
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* Nav */
+nav {
+  width: 100%;
+  margin: 0;
+}
+
+.header a.logo img {
+  float: left;
+}
+.header a.logo div {
+  width: auto;
+  height: auto;
+  float: left;
+  h1, span {
+    float: left;
+    clear: both;
+  }
+  h1 {    
+    margin-top: 8px;
+    font-size: map-get($font-sizes, 5);
+    line-height: map-get($font-sizes, 5);    
+  }
+  span {
+    margin-top: 10px;
+    font-size: map-get($font-sizes, 1);
+    line-height: map-get($font-sizes, 1);
+  }
+}
+/* Navbar */
+ul.navbar {
+  list-style: none;
+  width: auto;
+  margin: 0;
+}
+ul.navbar li {
+  float: left;
+  position: relative;
+}
+ul.navbar a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+/*--- DROPDOWN ---*/
+ul.navbar ul {
+  background-color: transparent;
+  /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+  background: rgba(255, 255, 255, 0);
+  /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+  position: absolute;
+  right: 9999px;
+  /* Hide off-screen when not needed (this is more accessible than display: none;) */
+}
+ul.navbar ul li {
+  float: none;
+}
+ul.navbar ul a {
+  white-space: nowrap;
+  /* Stop text wrapping and creating multi-line dropdown items */
+}
+ul.navbar li:hover ul {
+  /* Display the dropdown on hover */
+  right: 0;
+  /* Bring back on-screen when needed */
+}
+ul.navbar li:hover a {
+  cursor: pointer;
+}
+
+/* Page Content Wrapper */
+.content-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  clear: both;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Accordion Menu*/
+ul.accordion-menu {
+  width: 100%;
+  color:inherit;
+  float: left;
+  ul {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+  }
+  li {
+    height: auto !important;
+    a { /* difines js script calculations */
+      width: 100%;
+      float: left !important;
+      cursor: pointer;
+    }
+  }  
+}
+/* Page Content Menu*/
+.page-menu {
+  width: 100%;
+  height: auto;
+}
+
+/* Page Content Widgets */
+dl {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+dt {
+  width: 100%;
+  cursor: pointer;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+dd {
+  width: 100%;
+  height: 0;
+  margin: 0;  
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+dd p {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Utils */
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+.width-100 { width: 100%; }
+
+.img-responsive { max-width: 100%; height: 100%; }
+
+/* Text */
+.bold { font-weight: bold; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+/* Sizes */
+@for $i from 0 through 5 {
+  .size-#{$i} {
+    font-size: map-get($font-sizes, $i);
+  }  
+}
+
+/* Columns Responsive */
+[class*="col-"] {
+  float: left;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+/* $screens sizes is defined in mixins */
+@for $i from 1 through 12 {
+  .col-#{$i} { width: ($i * 100 / 12)* 1%; }
+  @media only screen and (max-width: map-get($screens, sm)) {
+    .col-sm-#{$i} { width: ($i * 100 / 12)* 1%; }
+  }
+}
+
+/* Cover */
+.body-cover {
+  @include cover;
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* Modals */
+.modal-dlg {
+  display: none;
+  @include cover;
+}
+.modal-dlg.modal-dlg-visible {
+  display: block;
+}
+.modal-dlg .modal-dlg-window {
+  width: 80%;
+  margin: 10% auto;
+}
+.modal-dlg .modal-dlg-header {
+  position: relative;
+  width: 100%;
+}
+.modal-dlg .modal-dlg-header-text {
+  height: auto;
+  font-weight: bold;
+  font-size: map-get($font-sizes, 2);
+  line-height: map-get($font-sizes, 2);
+  padding: 20px;
+}
+.modal-dlg .modal-dlg-header-close-btn {
+  position: absolute;  
+  top: 0;
+  right: 0;
+  width: auto;
+  margin: auto;
+  height: 100%;
+  line-height: 100%;
+  font-weight: bold;
+  padding: 20px 10px;
+  &:before{
+    content: '\2715';
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.modal-dlg .modal-dlg-content {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Fade Animation */
+@-webkit-keyframes fadeInFromNone {
+  0% { display: none; opacity: 0; }
+  1% { display: block; opacity: 0; }
+  100% { display: block; opacity: 1; }
+}
+@keyframes fadeInFromNone {
+  0% { display: none; opacity: 0; }
+  1% { display: block; opacity: 0; }
+  100% { display: block; opacity: 1; }
+}
+@-webkit-keyframes fadeOutFromNone {
+  0% { display: block; opacity: 1; }
+  1% { display: none; opacity: 1; }
+  100% { display: none; opacity: 0; }
+}
+@keyframes fadeOutFromNone {
+  0% { display: block; opacity: 1; }
+  1% { display: none; opacity: 1; }
+  100% { display: none; opacity: 0; }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Buttons */
+button.btn, a.btn {
+  @include btn;
+  &.btn-lg {
+    width: 100%;
+  }
+}
+.social-btn {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 3px;
+}
+
+/* Paddings in px */
+@for $i from 0 through 9 {
+  .pa-#{$i} { padding: $i*1px; }
+  .pt-#{$i} { padding-top: $i*1px; }
+  .pr-#{$i} { padding-right: $i*1px; }
+  .pb-#{$i} { padding-bottom: $i*1px; }
+  .pl-#{$i} { padding-left: $i*1px; }
+}
+@for $i from 1 through 5 {
+  $i: $i * 10;
+  .pa-#{$i} { padding: $i*1px; } .pa-#{$i+5} { padding: $i+5px; }
+  .pt-#{$i} { padding-top: $i*1px; } .pt-#{$i+5} { padding: $i+5px; }
+  .pr-#{$i} { padding-right: $i*1px; } .pr-#{$i+5} { padding: $i+5px; }
+  .pb-#{$i} { padding-bottom: $i*1px; } .pb-#{$i+5} { padding: $i+5px; }
+  .pl-#{$i} { padding-left: $i*1px; } .pl-#{$i+5} { padding: $i+5px; }
+}
+/* Margins in px */
+@for $i from 0 through 9 {
+  .ma-#{$i} { margin: $i*1px; }
+  .mt-#{$i} { margin-top: $i*1px; }
+  .mr-#{$i} { margin-right: $i*1px; }
+  .mb-#{$i} { margin-bottom: $i*1px; }
+  .ml-#{$i} { margin-left: $i*1px; }
+}
+@for $i from 1 through 5 {
+  $i: $i * 10;
+  .ma-#{$i} { margin: $i*1px; } .ma-#{$i+5} { margin: $i+5px; }
+  .mt-#{$i} { margin-top: $i*1px; } .mt-#{$i+5} { margin: $i+5px; }
+  .mr-#{$i} { margin-right: $i*1px; } .mr-#{$i+5} { margin: $i+5px; }
+  .mb-#{$i} { margin-bottom: $i*1px; } .mb-#{$i+5} { margin: $i+5px; }
+  .ml-#{$i} { margin-left: $i*1px; } .ml-#{$i+5} { margin: $i+5px; }
+}

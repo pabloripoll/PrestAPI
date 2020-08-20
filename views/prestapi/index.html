@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrestAPI</title>
+  <link rel="icon" href="/files/site/img/pr-solo-dark.png" type="image/png"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/css/essentials.css">
+  <link id="style-view" rel="stylesheet" href="/styles/css/website.css">
+  <!-- Fontawsome -->
+  <script src="https://kit.fontawesome.com/1f9c9b8238.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav id="top-header" class="top-header">
+    <ul>
+      <li>
+        <a id="btnLogin"><i class="fa fa-cog"></i> Sign In</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav id="header" class="header">
+    <a href="/" class="logo">
+      <img class="img-responsive" src="/files/site/img/pr-solo-light.png"/>
+      <div>
+        <h1>PrestAPI JS</h1>
+        <span>Simple Frontend Sample</span>
+      </div>      
+    </a>
+    <ul class="navbar">
+      <li>
+        <a href="/home.html">Home</a>
+      </li>
+      <li>
+        <a>Examples</a>
+        <ul>
+          <li>
+            <a href="/examples.html?value=1">Example 1</a>
+          </li>
+          <li>
+            <a href="/examples.html?value=2">Example 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="page-content" class="content-wrapper"><!-- Container -->    
+    <!--here it goes page content -->
+  </div><!-- /.wrapper-container -->
+  
+  <footer class="pt-20">
+    <div class="col-4 col-sm-12 pa-10">
+      <h4 class="bold width-100 text-center">Footer</h4>
+      <p class="width-100 text-center">First box footer content.</p>
+    </div>
+    <div class="col-4 col-sm-12 pa-10">
+      <h4 class="bold width-100 text-center">Footer</h4>
+      <p class="width-100 text-center">Second box footer content.</p>
+    </div>
+    <div class="col-4 col-sm-12 pa-10 text-center">
+      <h4 class="bold">Other Pages</h4>
+      <p>
+        <a class="social-btn" href="http://www.pabloripoll.com" target="_blank"><i class="fas fa-link"></i></a>
+        <a class="social-btn" href="https://github.com/pabloripoll" target="_blank"><i class="fab fa-github"></i></a>
+      </p>
+    </div>
+    <div id="copyright" class="col-12 mt-20">
+      <p class="pull-right size-0">&copy; 2020 • All Right Reserved</p>
+    </div>
+  </footer>
+  <div id="modal-dlg" class="modal-dlg">
+    <div class="modal-dlg-window">
+      <div class="modal-dlg-header">
+        <div class="modal-dlg-header-close-btn"></div>
+        <div class="modal-dlg-header-text"></div>
+      </div>
+      <div class="modal-dlg-content"></div>
+    </div>
+  </div>
+  <!-- JS Scripts -->
+  <script type="text/javascript" src="/assets/js/animations.js"></script>
+  <!-- DCM - App Core Config -->
+  <script type="text/javascript" src="/website/js/DcmUtilities.js"></script>  
+  <script type="text/javascript" src="index.js" id="DcmAppCore"></script>
+  <script type="text/javascript" id="DcmAppControl"></script>    
+  <script type="text/javascript" src="/website/js/DcmElements.js" id="DcmElements"></script>
+  <!-- DCM - Content Scripts -->
+</body>
+</html>
